@@ -1,36 +1,4 @@
 {
-  "name": "cra-template-redux-typescript-eslint",
-  "version": "0.1.0",
-  "license": "MIT",
-  "author": "Mayank Shinkhedkar <shinkhedkar.mayank@yahoo.com",
-  "engines": {
-    "node": ">=10"
-  },
-  "main": "template.json",
-  "description": "A quick start Create React App template with React, Redux, TypeScript and custom ESlint configurations",
-  "keywords": [
-    "react",
-    "create-react-app",
-    "cra-template",
-    "template",
-    "eslint",
-    "redux",
-    "react-redux",
-    "typescript",
-    "prettier"
-  ],
-  "files": [
-    "template",
-    "template.json"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mayankshinkhedkar/cra-template-redux-typescript-eslint",
-    "directory": "/"
-  },
-  "bugs": {
-    "url": "https://github.com/mayankshinkhedkar/cra-template-redux-typescript-eslint/issues"
-  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.2.5",
     "@testing-library/jest-dom": "^4.2.4",
