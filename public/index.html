@@ -24,7 +24,61 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React Redux App</title>
+    <title>React Redux Typescript Eslint App</title>
+    <!-- Custom link -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <!-- Custom script -->
+    <script>
+
+      // https://blog.guya.net/2015/06/12/sharing-sessionstorage-between-tabs-for-secure-multi-tab-authentication/
+      // https://blog.guya.net/security/browser_session/sessionStorage.html
+  
+      // Removed IE support in this demo for the sake of simplicity
+      (function () {
+  
+        if (!sessionStorage.length) {
+          // Ask other tabs for session storage
+          localStorage.setItem('getSessionStorage', Date.now());
+        };
+  
+        window.addEventListener('storage', function (event) {
+  
+          //console.log('storage event', event);
+  
+          if (event.key == 'getSessionStorage') {
+            // Some tab asked for the sessionStorage -> send it
+  
+            localStorage.setItem('sessionStorage', JSON.stringify(sessionStorage));
+            localStorage.removeItem('sessionStorage');
+  
+          } else if (event.key == 'sessionStorage' && !sessionStorage.length) {
+            // sessionStorage is empty -> fill it
+  
+            var data = JSON.parse(event.newValue),
+              value;
+  
+            for (key in data) {
+              sessionStorage.setItem(key, data[key]);
+            }
+  
+            // showSessionStorage();
+          }
+        });
+  
+        window.onbeforeunload = function () {
+          //sessionStorage.clear();
+        };
+  
+      })();
+
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

@@ -1,0 +1,14 @@
+{
+  "common": {
+   
+  },
+  "header": {
+    "logout": "Logout",
+    "language": "Language",
+    "hindi": "Hindi",
+    "english": "English"
+  },
+  "dashboard": {
+    "title": "Dashboard"
+  }
+}
